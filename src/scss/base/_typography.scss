@@ -1,0 +1,16 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  padding-bottom: 1rem;
+}
+
+p,
+ol,
+ul,
+body {
+  font-family: $font-body;
+}
