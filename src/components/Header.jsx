@@ -93,7 +93,7 @@ const Header = () => {
             </div>
 
             {mobileMenuVisible && ( // Only show the mobile menu when mobileMenuVisible is true
-              <div className="site-header__mobile-menu absolute w-full left-0 top-[72px] bg-white">
+              <div className="site-header__mobile-menu absolute w-full left-0 top-[73px] bg-white">
                 <ul className="site-header__mobile-menu__items flex flex-col gap-y-2">
                   {menuItems.map((item) => (
                     <li
