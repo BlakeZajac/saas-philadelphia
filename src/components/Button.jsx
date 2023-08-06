@@ -17,7 +17,7 @@ const Button = ({ children, className, href }) => {
   );
 };
 
-Button.PropTypes = {
+Button.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   href: PropTypes.string,
