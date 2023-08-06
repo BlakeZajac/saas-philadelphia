@@ -3,11 +3,11 @@ import { twMerge } from "tailwind-merge";
 
 const Button = ({ children, className, href }) => {
   return (
-    <a href={href} className="rounded-full">
+    <a href={href} className="rounded-full block">
       <button
         type="button"
         className={twMerge(
-          "text-white bg-[#5b6cff] rounded-full px-5 py-2.5 font-medium text-[15px] transition hover:bg-[#4340ca] focus:outline-black",
+          "text-white bg-[#5b6cff] rounded-full px-4 py-2 font-medium text-[15px] lg:text-[16px] transition hover:bg-[#4340ca] focus:outline-black",
           className
         )}
       >
