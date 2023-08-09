@@ -11,7 +11,6 @@ const Features = ({ title, body }) => {
       image: featuresImage01,
       imagePosition: "left",
       imageAlt: "",
-      isLast: false,
     },
 
     {
@@ -27,8 +26,8 @@ const Features = ({ title, body }) => {
 
   return (
     <div id="features" className="features">
-      <Container className="py-8 pt-0">
-        <div className="flex flex-col pt-8 py-16 max-w-[800px] text-center mx-auto">
+      <Container className="py-8">
+        <div className="flex flex-col py-16 max-w-[800px] text-center mx-auto">
           {title && <h3 className="pb-6">{title}</h3>}
           {body && <p className="text-gray-700">{body}</p>}
         </div>
@@ -45,7 +44,7 @@ const Features = ({ title, body }) => {
             <div className="flex flex-col flex-1 gap-y-4 justify-center">
               {item.badge && <Badge>{item.badge}</Badge>}
 
-              <div className="pb-4">
+              <div className="pb-4 lg:max-w-[700px]">
                 {item.title && <h5>{item.title}</h5>}
                 {item.body && <p className="text-gray-700">{item.body}</p>}
               </div>
