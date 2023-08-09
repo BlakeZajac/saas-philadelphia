@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { Badge, Container } from "./index";
+import { featuresImage01, featuresImage02 } from "../img/features/index";
 
 const Features = ({ title, body }) => {
   const featureItems = [
@@ -6,7 +8,7 @@ const Features = ({ title, body }) => {
       badge: "Progress tracking",
       title: "Stay organised and on top of your tasks",
       body: "Philadelphia empowers teams to monitor task progress effectively. With an intuitive progress tracking feature, visualise the status of each task through interactive progress bars.",
-      image: "",
+      image: featuresImage01,
       imagePosition: "left",
       imageAlt: "",
     },
@@ -15,7 +17,7 @@ const Features = ({ title, body }) => {
       badge: "To-do list and task management",
       title: "Visualise success and drive productivity with Philadelphia",
       body: "Easily identify bottlenecks, measure team performance, and ensure timely completion of projects. Stay informed and keep projects on track with Philadelphia's progress tracking capabilities.",
-      image: "",
+      image: featuresImage02,
       imagePosition: "right",
       imageAlt: "",
     },
@@ -23,29 +25,31 @@ const Features = ({ title, body }) => {
 
   return (
     <div id="features" className="features">
-      <div className="flex flex-col">
-        {title && <h4>{title}</h4>}
-        {body && <p>{body}</p>}
-      </div>
+      <Container>
+        <div className="flex-col hidden">
+          {title && <h4>{title}</h4>}
+          {body && <p>{body}</p>}
+        </div>
 
-      <div>
-        {featureItems.map((item) => (
-          <div key={item.badge}>
-            <div>
-              {item.badge && <div>Badge</div>}
+        <div>
+          {featureItems.map((item) => (
+            <div key={item.badge}>
+              <div className="flex flex-col gap-y-4">
+                {item.badge && <Badge>{item.badge}</Badge>}
+
+                <div>
+                  {item.title && <h5>{item.title}</h5>}
+                  {item.body && <p>{item.body}</p>}
+                </div>
+              </div>
 
               <div>
-                {item.title && <h5>{item.title}</h5>}
-                {item.body && <p>{item.body}</p>}
+                {item.image && <img src={item.image} alt={item.imageAlt} />}
               </div>
             </div>
-
-            <div>
-              {item.image && <img src={item.image} alt={item.imageAlt} />}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Container>
     </div>
   );
 };
