@@ -1,4 +1,4 @@
-import logoIcon from "../img/icon-white.svg";
+import logoIcon from "../img/brand/icon-white.svg";
 
 const IconButton = () => {
   return (

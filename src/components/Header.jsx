@@ -3,7 +3,7 @@ import { GoChevronRight } from "react-icons/go";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
 
-import logo from "../img/logo.svg";
+import logo from "../img/brand/logo.svg";
 import Button from "./Button";
 import Container from "./Container";
 
