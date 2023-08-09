@@ -1,0 +1,22 @@
+@use "sass:math";
+
+@function strip-units($number) {
+  @return math.div($number, $number * 0 + 1);
+}
+
+@function rem($target, $context: $font-size-base) {
+  @return strip-units(math.div($target, $context)) * 1rem;
+}
+
+@function em($pixels, $context: $font-size-base, $unitless: false) {
+  @if ($unitless == false) {
+    @return math.div(strip-units($pixels), strip-units($context)) * 1em;
+  } @else {
+    @return math.div(strip-units($pixels), strip-units($context));
+  }
+}
+
+// Return max-width breakpoint
+@function max-width($value) {
+  @return $value - em(1px);
+}

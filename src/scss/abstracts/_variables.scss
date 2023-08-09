@@ -5,3 +5,13 @@ $color-black: #000;
 // Font
 $font-heading: "DM Sans", "Inter", sans-serif;
 $font-body: "Inter", "DM Sans", sans-serif;
+$font-size-base: 16px !default;
+
+// Breakpoints
+$break-grid-sm: 460px;
+$break-grid-md: 768px;
+$break-grid-lg: 1024px;
+$break-grid-ds: 1280px;
+$break-grid-xl: 1400px;
+$break-grid-2xl: 1680px;
+$break-grid-hg: 1920px;
