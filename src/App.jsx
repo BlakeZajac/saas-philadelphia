@@ -1,14 +1,17 @@
 import "./index.css";
 import "../src/scss/main.scss";
 
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Clients from "./components/Clients";
-import GradientCta from "./components/GradientCta";
-import Footer from "./components/Footer";
+import {
+  Header,
+  Hero,
+  Clients,
+  GradientCta,
+  Cards,
+  Features,
+  Footer,
+} from "./components/index";
 
 import gradientCtaImage from "../src/img/gradient-cta/gradient-cta.webp";
-import Cards from "./components/Cards";
 
 function App() {
   return (
@@ -34,6 +37,11 @@ function App() {
       />
 
       <Cards />
+
+      <Features
+        title="Empower your team's productivity with Philadelphia's robust task management and dynamic to-do list"
+        body="Efficiently manage tasks and prioritise workloads while staying organized and on track with Philadelphia's oowerful task management and dynamic to-do list capabilities."
+      />
 
       <Footer />
     </>
