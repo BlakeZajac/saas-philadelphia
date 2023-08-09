@@ -9,17 +9,17 @@ $colors: (
 
 @each $color-name, $color in $colors {
   .bg-#{$color-name} {
-    background: #{$color-name};
+    background: #{$color};
   }
 
   .color-#{$color-name} {
-    color: #{$color-name};
+    color: #{$color};
   }
 }
 
 // Gradient
 $gradient-radial-light: radial-gradient(circle at 0 0, #e2e296, #a1cfff);
-$gradient-radial-dark: radial-gradient(circle at 50% 100%, #3b5477, #000);
+$gradient-radial-dark: radial-gradient(circle at 50% 150%, #3b5477, #000);
 $gradient-linear-light: linear-gradient(45deg, #1ab4d7, #ff9084);
 
 $gradients: (
@@ -30,11 +30,11 @@ $gradients: (
 
 @each $gradient-name, $gradient in $gradients {
   .bg-#{$gradient-name} {
-    background: #{$gradient-name};
+    background: #{$gradient};
   }
 
   .color-#{$gradient-name} {
-    color: #{$gradient-name};
+    background-image: #{$gradient};
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

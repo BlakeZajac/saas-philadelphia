@@ -12,15 +12,18 @@ const Hero = ({
 }) => {
   return (
     <div className="hero mt-4">
-      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl bg-black overflow-hidden p-12">
-        <div className="hero__content text-center text-white pb-8">
+      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-12">
+        <div className="hero__content text-center text-white pb-8 max-w-[1000px]">
           {title && (
-            <h1 className="hero__title pb-8">
-              {title} <span className="color-gradient">{highlightedWord}</span>
+            <h1 className="hero__title pb-6 sm:pb-8 text-[2.5rem] sm:text-[3.875rem] lg:text-[5.8125rem]">
+              {title}{" "}
+              <span className="color-gradient-radial-light">
+                {highlightedWord}
+              </span>
             </h1>
           )}
 
-          {body && <p className="hero__body text-lg">{body}</p>}
+          {body && <p className="hero__body sm:text-lg">{body}</p>}
         </div>
 
         {image && (

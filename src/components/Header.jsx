@@ -26,8 +26,8 @@ const Header = () => {
 
   const menuItems = [
     {
-      label: "Team Power",
-      href: "#team-power",
+      label: "Features",
+      href: "#features",
     },
 
     {
@@ -68,12 +68,12 @@ const Header = () => {
         {!isMobile ? (
           // Desktop Menu - Display when !isMobile is true
           <>
-            <ul className="site-header__items flex items-center gap-x-2">
+            <ul className="site-header__items flex items-center gap-x-4">
               {menuItems.map((item) => (
                 <li key={item.href} className="site-header__item">
                   <a
                     href={item.href}
-                    className="site-header__item__link font-medium text-[15px] lg:text-[16px] border-b border-[#fff] hover:border-[#5b6cff] px-2 py-6 block transition"
+                    className="site-header__item__link font-medium text-[15px] lg:text-[16px] border-b border-[#fff] hover:border-blue px-2 py-6 block transition"
                   >
                     {item.label}
                   </a>
@@ -85,6 +85,13 @@ const Header = () => {
         ) : (
           // Mobile Menu - Display when !isMobile is true
           <>
+            <div
+              className={`${
+                mobileMenuVisible ? "block" : "hidden"
+              } fixed inset-0 bg-black opacity-50 top-[73px]`}
+              onClick={toggleMobileMenu}
+            ></div>
+
             <div
               onClick={toggleMobileMenu}
               className="site-header__hamburger-menu bg-[#5b6cff] rounded-md p-2 cursor-pointer"
@@ -114,7 +121,7 @@ const Header = () => {
                   ))}
                 </ul>
 
-                <Button className="fixed bottom-8 ml-[5%] py-3 w-[90%]">
+                <Button className="my-4 ml-[5%] py-3 w-[90%]">
                   Get Started
                 </Button>
               </div>
