@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Badge, Container } from "./index";
+import { Badge, Button, Container } from "./index";
 import { featuresImage01, featuresImage02 } from "../img/features/index";
 
 const Features = ({ title, body }) => {
@@ -11,6 +11,7 @@ const Features = ({ title, body }) => {
       image: featuresImage01,
       imagePosition: "left",
       imageAlt: "",
+      isLast: false,
     },
 
     {
@@ -20,35 +21,49 @@ const Features = ({ title, body }) => {
       image: featuresImage02,
       imagePosition: "right",
       imageAlt: "",
+      isLast: true,
     },
   ];
 
   return (
     <div id="features" className="features">
-      <Container>
-        <div className="flex-col hidden">
-          {title && <h4>{title}</h4>}
-          {body && <p>{body}</p>}
+      <Container className="py-8 pt-0">
+        <div className="flex flex-col pt-8 py-16 max-w-[800px] text-center mx-auto">
+          {title && <h3 className="pb-6">{title}</h3>}
+          {body && <p className="text-gray-700">{body}</p>}
         </div>
 
-        <div>
-          {featureItems.map((item) => (
-            <div key={item.badge}>
-              <div className="flex flex-col gap-y-4">
-                {item.badge && <Badge>{item.badge}</Badge>}
+        {featureItems.map((item) => (
+          <div
+            key={item.badge}
+            className={`flex flex-col gap-8 lg:gap-12 ${
+              item.imagePosition === "left"
+                ? "lg:flex-row-reverse"
+                : "lg:flex-row"
+            } ${item.isLast ? "pb-0" : "pb-12"}`}
+          >
+            <div className="flex flex-col flex-1 gap-y-4 justify-center">
+              {item.badge && <Badge>{item.badge}</Badge>}
 
-                <div>
-                  {item.title && <h5>{item.title}</h5>}
-                  {item.body && <p>{item.body}</p>}
-                </div>
+              <div className="pb-4">
+                {item.title && <h5>{item.title}</h5>}
+                {item.body && <p className="text-gray-700">{item.body}</p>}
               </div>
 
-              <div>
-                {item.image && <img src={item.image} alt={item.imageAlt} />}
-              </div>
+              <Button href="#">Learn More</Button>
             </div>
-          ))}
-        </div>
+
+            <div className="flex flex-1 items-start justify-center bg-linear-gradient-light rounded-3xl max-h-[600px] overflow-hidden">
+              {item.image && (
+                <img
+                  src={item.image}
+                  alt={item.imageAlt}
+                  className="object-cover h-[800px]"
+                />
+              )}
+            </div>
+          </div>
+        ))}
       </Container>
     </div>
   );
