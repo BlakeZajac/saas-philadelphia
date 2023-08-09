@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
-import Container from "./Container";
-import Button from "./Button";
+import { Button, Container } from "./index";
 
 const Hero = ({
   title,

@@ -1,4 +1,4 @@
-import Container from "./Container";
+import { Container } from "./index";
 import * as clientLogos from "../img/clients/index";
 
 const Clients = () => {
@@ -12,7 +12,7 @@ const Clients = () => {
   return (
     <div className="clients">
       <Container className="py-8 pb-10">
-        <p className="text-sm text-center pb-6">
+        <p className="text-sm text-center text-gray-600 pb-6">
           Trusted by top-tier product companies
         </p>
 

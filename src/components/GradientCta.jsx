@@ -1,13 +1,12 @@
 import PropTypes from "prop-types";
-import Container from "./Container";
-import IconButton from "./IconButton";
+import { Container, IconButton } from "./index";
 
 const GradientCta = ({ title, body, image, hasIconButton }) => {
   return (
     <div className="gradient-cta">
       <Container className="lg:flex items-center gap-8 bg-gradient-linear-light rounded-xl px-8 py-12 lg:px-16 lg:pr-0 text-white">
         <div className="flex-1 pb-12 lg:pb-0">
-          <div className="flex flex-col lg:gap-y-2 max-w-[600px]">
+          <div className="flex flex-col lg:gap-y-2 lg:max-w-[600px]">
             {title && <h4>{title}</h4>}
             {body && <p>{body}</p>}
 

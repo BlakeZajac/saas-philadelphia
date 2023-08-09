@@ -4,8 +4,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { GrClose } from "react-icons/gr";
 
 import logo from "../img/brand/logo.svg";
-import Button from "./Button";
-import Container from "./Container";
+import { Button, Container } from "./index";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(false);

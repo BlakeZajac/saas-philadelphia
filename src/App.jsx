@@ -8,6 +8,7 @@ import GradientCta from "./components/GradientCta";
 import Footer from "./components/Footer";
 
 import gradientCtaImage from "../src/img/gradient-cta/gradient-cta.webp";
+import Cards from "./components/Cards";
 
 function App() {
   return (
@@ -31,6 +32,8 @@ function App() {
         image={gradientCtaImage}
         hasIconButton
       />
+
+      <Cards />
 
       <Footer />
     </>
