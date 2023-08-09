@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import Container from "./Container";
 import Button from "./Button";
@@ -13,15 +12,15 @@ const Hero = ({
 }) => {
   return (
     <div className="hero mt-4">
-      <Container className="rounded-3xl bg-black overflow-hidden p-12">
-        <div className="hero__content text-center text-white">
+      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl bg-black overflow-hidden p-12">
+        <div className="hero__content text-center text-white pb-8">
           {title && (
-            <h1 className="hero__title">
+            <h1 className="hero__title pb-8">
               {title} <span className="color-gradient">{highlightedWord}</span>
             </h1>
           )}
 
-          {body && <p className="hero__body">{body}</p>}
+          {body && <p className="hero__body text-lg">{body}</p>}
         </div>
 
         {image && (

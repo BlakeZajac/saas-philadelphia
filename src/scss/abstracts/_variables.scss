@@ -2,6 +2,45 @@
 $color-white: #fff;
 $color-black: #000;
 
+$colors: (
+  white: $color-white,
+  black: $color-black,
+);
+
+@each $color-name, $color in $colors {
+  .bg-#{$color-name} {
+    background: #{$color-name};
+  }
+
+  .color-#{$color-name} {
+    color: #{$color-name};
+  }
+}
+
+// Gradient
+$gradient-radial-light: radial-gradient(circle at 0 0, #e2e296, #a1cfff);
+$gradient-radial-dark: radial-gradient(circle at 50% 100%, #3b5477, #000);
+$gradient-linear-light: linear-gradient(45deg, #1ab4d7, #ff9084);
+
+$gradients: (
+  gradient-radial-light: $gradient-radial-light,
+  gradient-radial-dark: $gradient-radial-dark,
+  gradient-linear-light: $gradient-linear-light,
+);
+
+@each $gradient-name, $gradient in $gradients {
+  .bg-#{$gradient-name} {
+    background: #{$gradient-name};
+  }
+
+  .color-#{$gradient-name} {
+    color: #{$gradient-name};
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 // Font
 $font-heading: "DM Sans", "Inter", sans-serif;
 $font-body: "Inter", "DM Sans", sans-serif;

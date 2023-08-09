@@ -13,6 +13,9 @@ function App() {
         title="Stay agile and oranigsed with"
         highlightedWord="Philadelphia"
         body="Boost productivity and collaboration with weekly sprints and progress tracking."
+        image=""
+        buttonText="Get Started"
+        buttonHref="#"
       />
       <Footer />
     </>
