@@ -11,7 +11,7 @@ const Clients = () => {
 
   return (
     <div className="clients">
-      <Container className="py-8">
+      <Container className="py-8 pb-10">
         <p className="text-sm text-center pb-6">
           Trusted by top-tier product companies
         </p>
