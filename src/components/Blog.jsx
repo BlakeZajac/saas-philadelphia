@@ -28,7 +28,7 @@ const Blog = ({ title, body }) => {
 
   return (
     <Section id="blog" className="blog">
-      <Container className="flex flex-col gap-20 py-20">
+      <Container className="flex flex-col gap-12 py-20 md:gap-20 md:py-20">
         <div className="mx-auto max-w-[600px] text-center">
           {title && <h2 className="h3">{title}</h2>}
           {body && <p className="text-gray-700">{body}</p>}
@@ -48,7 +48,7 @@ const Blog = ({ title, body }) => {
               )}
 
               <div>
-                {item.title && <h2 className="h5">{item.title}</h2>}
+                {item.title && <h2 className="h5 pb-6">{item.title}</h2>}
                 {item.excerpt && (
                   <p className="text-gray-700">{item.excerpt}</p>
                 )}
