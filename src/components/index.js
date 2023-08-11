@@ -1,4 +1,5 @@
 import Badge from "./Badge"
+import Blog from "./Blog"
 import Button from "./Button"
 import Cards from "./Cards"
 import Clients from "./Clients"
@@ -13,4 +14,4 @@ import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
 import Section from "./Section"
 
-export { Badge, Button, Cards, Clients, Container, Features, Footer, GradientCta, Header, Hero, IconButton, Pricing, PricingCard, Section }
+export { Badge, Blog, Button, Cards, Clients, Container, Features, Footer, GradientCta, Header, Hero, IconButton, Pricing, PricingCard, Section }

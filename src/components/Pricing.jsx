@@ -43,7 +43,7 @@ const Pricing = () => {
 
   return (
     <Section id="pricing" className="pricing">
-      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-12 md:p-16">
+      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-12 md:p-16 mt-8">
         <div className="text-center text-white max-w-[700px] mx-auto pb-10 lg:pb-16">
           <h2 className="pb-6 lg:pb-8">
             Pricing that <br />
