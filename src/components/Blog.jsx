@@ -1,5 +1,11 @@
+import { Section, Container } from "./index";
+
 const Blog = () => {
-  return <div>Blog</div>;
+  return (
+    <Section id="blog" className="blog">
+      <Container>Blog</Container>
+    </Section>
+  );
 };
 
 export default Blog;
