@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Button from "./Button";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 const PricingCard = ({ isFeatured, title, price, description, benefits }) => {
   return (
@@ -17,13 +18,17 @@ const PricingCard = ({ isFeatured, title, price, description, benefits }) => {
       </div>
 
       <div>
-        {benefits && (
-          <ul>
-            {benefits.map((benefit, index) => (
-              <li key={index}>{benefit}</li>
-            ))}
-          </ul>
-        )}
+        {benefits &&
+          benefits.map((benefit, index) => (
+            <div key={index} className="flex gap-x-2">
+              <AiFillCheckCircle
+                className={`${isFeatured ? "text-white" : "text-black"}`}
+                size={20}
+              />
+
+              <p>{benefit}</p>
+            </div>
+          ))}
       </div>
     </div>
   );
