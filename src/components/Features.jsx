@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Badge, Button, Container } from "./index";
+import { Badge, Button, Container, Section } from "./index";
 import { featuresImage01, featuresImage02 } from "../img/features/index";
 
 const Features = ({ title, body }) => {
@@ -25,7 +25,7 @@ const Features = ({ title, body }) => {
   ];
 
   return (
-    <div id="features" className="features">
+    <Section id="features" className="features">
       <Container className="py-8">
         <div className="flex flex-col py-16 max-w-[800px] text-center mx-auto">
           {title && <h3 className="pb-6">{title}</h3>}
@@ -64,7 +64,7 @@ const Features = ({ title, body }) => {
           </div>
         ))}
       </Container>
-    </div>
+    </Section>
   );
 };
 

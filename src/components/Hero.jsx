@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { Button, Container } from "./index";
+import { Button, Container, Section } from "./index";
 
 const Hero = ({
   title,
@@ -10,7 +10,7 @@ const Hero = ({
   buttonHref,
 }) => {
   return (
-    <div className="hero mt-4">
+    <Section className="hero mt-4">
       <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-8 md:p-16">
         <div className="hero__content text-center text-white pb-8 max-w-[1000px]">
           {title && (
@@ -33,7 +33,7 @@ const Hero = ({
 
         {buttonText && <Button href={buttonHref}>{buttonText}</Button>}
       </Container>
-    </div>
+    </Section>
   );
 };
 

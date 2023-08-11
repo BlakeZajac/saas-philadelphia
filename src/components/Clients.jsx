@@ -1,4 +1,4 @@
-import { Container } from "./index";
+import { Container, Section } from "./index";
 import * as clientLogos from "../img/clients/index";
 
 const Clients = () => {
@@ -10,7 +10,7 @@ const Clients = () => {
   }));
 
   return (
-    <div className="clients">
+    <Section className="clients">
       <Container className="py-8 pb-10">
         <p className="text-sm text-center text-gray-600 pb-6">
           Trusted by top-tier product companies
@@ -24,7 +24,7 @@ const Clients = () => {
           ))}
         </div>
       </Container>
-    </div>
+    </Section>
   );
 };
 

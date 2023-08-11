@@ -1,4 +1,4 @@
-import { Container } from "./index";
+import { Container, Section } from "./index";
 import { cardImage01, cardImage02, cardImage03 } from "../img/cards/index";
 
 const Cards = () => {
@@ -23,7 +23,7 @@ const Cards = () => {
   ];
 
   return (
-    <div className="cards">
+    <Section className="cards">
       <Container className="py-8">
         <div className="flex flex-col md:flex-row gap-4">
           {cardItems.map((item) => (
@@ -41,7 +41,7 @@ const Cards = () => {
           ))}
         </div>
       </Container>
-    </div>
+    </Section>
   );
 };
 
