@@ -1,11 +1,13 @@
 import PropTypes from "prop-types";
 import { twMerge } from "tailwind-merge";
 
-const Section = ({ children, className, id }) => {
+const Section = ({ children, className, id, elementType }) => {
+  const Element = elementType || "div";
+
   return (
-    <div id={id} className={twMerge("section", className)}>
+    <Element id={id} className={twMerge("section", className)}>
       {children}
-    </div>
+    </Element>
   );
 };
 
@@ -13,6 +15,7 @@ Section.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   id: PropTypes.string,
+  elementType: PropTypes.string,
 };
 
 export default Section;

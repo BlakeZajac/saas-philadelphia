@@ -52,7 +52,7 @@ const Header = () => {
   const HamburgerIcon = mobileMenuVisible ? GrClose : RxHamburgerMenu;
 
   return (
-    <header className="site-header border-b">
+    <header className="site-header border-b relative z-10">
       <Container className="flex items-center justify-between py-4 md:py-0">
         <div className="site-header__logo">
           <a href="/">
@@ -120,9 +120,7 @@ const Header = () => {
                   ))}
                 </ul>
 
-                <Button className="my-4 ml-[5%] py-3 w-[90%]">
-                  Get Started
-                </Button>
+                <Button className="my-4 ml-[5%] w-[90%]">Get Started</Button>
               </div>
             )}
           </>

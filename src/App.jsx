@@ -10,6 +10,7 @@ import {
   Features,
   Footer,
   Pricing,
+  Blog,
 } from "./components/index";
 
 import gradientCtaImage from "../src/img/gradient-cta/gradient-cta.webp";
@@ -45,6 +46,7 @@ function App() {
       />
 
       <Pricing />
+      <Blog />
 
       <Footer />
     </>
