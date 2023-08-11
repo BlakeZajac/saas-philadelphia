@@ -1,6 +1,7 @@
+import PropTypes from "prop-types";
 import { Section, Container, PricingCard } from "./index";
 
-const Pricing = () => {
+const Pricing = ({ title, body, highlightedWord }) => {
   const PricingItems = [
     {
       title: "Free",
@@ -43,20 +44,18 @@ const Pricing = () => {
 
   return (
     <Section id="pricing" className="pricing">
-      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-12 md:p-16 mt-8">
-        <div className="text-center text-white max-w-[700px] mx-auto pb-10 lg:pb-16">
-          <h2 className="pb-6 lg:pb-8">
-            Pricing that <br />
-            <span className="color-gradient-radial-light">
-              suits your needs
-            </span>
-          </h2>
+      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden px-4 py-12 md:p-16 mt-8">
+        <div className="text-center text-white max-w-[700px] mx-auto px-4 sm:px-0 pb-10 lg:pb-16">
+          {title && (
+            <h2 className="pb-6 lg:pb-8">
+              {title} <br />
+              <span className="color-gradient-radial-light">
+                {highlightedWord}
+              </span>
+            </h2>
+          )}
 
-          <p className="md:text-lg">
-            Boost your team&apos;s efficiency with Philadelphia&apos;s intuitive
-            task management system. Choose the plan that aligns perfectly with
-            your goals and budget.
-          </p>
+          {body && <p className="md:text-lg">{body}</p>}
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
@@ -75,6 +74,12 @@ const Pricing = () => {
       </Container>
     </Section>
   );
+};
+
+Pricing.propTypes = {
+  title: PropTypes.string,
+  body: PropTypes.string,
+  highlightedWord: PropTypes.string,
 };
 
 export default Pricing;

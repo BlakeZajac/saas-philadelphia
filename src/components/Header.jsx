@@ -145,6 +145,7 @@ const Header = () => {
                       <a
                         href={item.href}
                         className="site-header__mobile-menu__item__link flex items-center justify-between px-[5%] py-4 border-b"
+                        onClick={toggleMobileMenu}
                       >
                         {item.label}
                         <GoChevronRight

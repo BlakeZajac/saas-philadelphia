@@ -13,5 +13,6 @@ import IconButton from "./IconButton"
 import Pricing from "./Pricing"
 import PricingCard from "./PricingCard"
 import Section from "./Section"
+import Subscribe from "./Subscribe"
 
-export { Badge, Blog, Button, Cards, Clients, Container, Features, Footer, GradientCta, Header, Hero, IconButton, Pricing, PricingCard, Section }
+export { Badge, Blog, Button, Cards, Clients, Container, Features, Footer, GradientCta, Header, Hero, IconButton, Pricing, PricingCard, Section, Subscribe }
