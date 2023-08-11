@@ -12,7 +12,7 @@ const Clients = () => {
   return (
     <Section className="clients">
       <Container className="py-8 pb-10">
-        <p className="text-sm text-center text-gray-600 pb-6">
+        <p className="text-sm text-center text-gray-700 pb-6">
           Trusted by top-tier product companies
         </p>
 

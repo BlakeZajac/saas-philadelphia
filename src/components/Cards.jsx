@@ -33,7 +33,7 @@ const Cards = () => {
             >
               <div className="flex-grow p-8">
                 {item.title && <h5>{item.title}</h5>}
-                {item.body && <p className="text-gray-600">{item.body}</p>}
+                {item.body && <p className="text-gray-700">{item.body}</p>}
               </div>
 
               {item.image && <img src={item.image} alt="" />}

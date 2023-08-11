@@ -49,7 +49,7 @@ const Header = () => {
       });
     }
 
-    const debouncedHandleScroll = debounce(handleScroll, 300);
+    const debouncedHandleScroll = debounce(handleScroll, 100);
 
     window.addEventListener("scroll", debouncedHandleScroll);
     return () => {
