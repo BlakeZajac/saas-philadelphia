@@ -37,9 +37,9 @@ const Features = ({ title, body }) => {
             key={item.badge}
             className={`flex flex-col gap-8 lg:gap-12 ${
               item.imagePosition === "left"
-                ? "lg:flex-row-reverse"
-                : "lg:flex-row"
-            } ${item.isLast ? "pb-0" : "pb-12"}`}
+                ? "flex-col-reverse lg:flex-row-reverse"
+                : "flex-col-reverse lg:flex-row"
+            } ${item.isLast ? "pb-0" : "pb-12 lg:pb-16"}`}
           >
             <div className="flex flex-col flex-1 gap-y-4 justify-center">
               {item.badge && <Badge>{item.badge}</Badge>}
@@ -52,12 +52,12 @@ const Features = ({ title, body }) => {
               <Button href="#">Learn More</Button>
             </div>
 
-            <div className="flex flex-1 items-start justify-center bg-linear-gradient-light rounded-3xl max-h-[600px] overflow-hidden">
+            <div className="flex flex-1 items-start justify-center bg-linear-gradient-light rounded-3xl max-h-[400px] sm:max-h-[500px] lg:max-h-[600px] overflow-hidden">
               {item.image && (
                 <img
                   src={item.image}
                   alt={item.imageAlt}
-                  className="object-cover h-[800px]"
+                  className="object-cover h-[600px] lg:h-[800px]"
                 />
               )}
             </div>
