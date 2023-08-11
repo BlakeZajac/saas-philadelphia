@@ -9,6 +9,8 @@ import GradientCta from "./GradientCta"
 import Header from "./Header"
 import Hero from "./Hero"
 import IconButton from "./IconButton"
+import Pricing from "./Pricing"
+import PricingCard from "./PricingCard"
 import Section from "./Section"
 
-export { Badge, Button, Cards, Clients, Container, Features, Footer, GradientCta, Header, Hero, IconButton, Section }
+export { Badge, Button, Cards, Clients, Container, Features, Footer, GradientCta, Header, Hero, IconButton, Pricing, PricingCard, Section }
