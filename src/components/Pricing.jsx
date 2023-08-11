@@ -6,7 +6,6 @@ const Pricing = () => {
       title: "Free",
       price: "$0",
       description: "Stay organised, on us!",
-      isFeatured: true,
 
       benefits: [
         "Task lists: Create and manage tasks effortlessly.",
@@ -18,12 +17,13 @@ const Pricing = () => {
     {
       title: "Basic",
       price: "$12",
-      description: "Enhanced features from just $12/month",
+      description: "Enhanced features suited for all teams",
+      isFeatured: true,
 
       benefits: [
         "Unlimited task lists: Organise your projects without limitations.",
-        "Collaboration Plus: Enjoy advanced collaboration tools for smoother teamwork.",
-        "Custom Labels: Tailor your labels to suit your workflow.",
+        "Collaboration plus: Enjoy advanced collaboration tools for smoother teamwork.",
+        "Custom labels: Tailor your labels to suit your workflow.",
       ],
     },
 
@@ -34,18 +34,18 @@ const Pricing = () => {
 
       benefits: [
         "Everything in Basic",
-        "Advanced Collaboration: Delegate tasks, set permissions, and collaborate seamlessly.",
-        "Priority Support: Get fast, personalized assistance whenever you need it.",
-        "Analytics and Insights: Gain valuable insights into your team's productivity.",
+        "Advanced collaboration: Delegate tasks, set permissions, and collaborate seamlessly.",
+        "Priority support: Get fast, personalised assistance whenever you need it.",
+        "Analytics and insights: Gain valuable insights into your team's productivity.",
       ],
     },
   ];
 
   return (
     <Section id="pricing" className="pricing">
-      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-8 md:p-16">
-        <div className="text-center text-white max-w-[700px] mx-auto">
-          <h2 className="pb-8">
+      <Container className="bg-radial-gradient-dark flex flex-col items-center justify-center rounded-3xl overflow-hidden p-12 md:p-16">
+        <div className="text-center text-white max-w-[700px] mx-auto pb-10 lg:pb-16">
+          <h2 className="pb-6 lg:pb-8">
             Pricing that <br />
             <span className="color-gradient-radial-light">
               suits your needs
@@ -59,9 +59,10 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
           {PricingItems.map((item) => (
             <PricingCard
+              className="flex-1"
               key={item.title}
               isFeatured={item.isFeatured}
               title={item.title}
