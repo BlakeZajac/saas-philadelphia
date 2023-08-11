@@ -25,6 +25,14 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
+    const debounce = (func, delay) => {
+      let timeout;
+      return (...args) => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func(...args), delay);
+      };
+    };
+
     function handleScroll() {
       const sections = document.querySelectorAll(".section");
       sections.forEach((section) => {
@@ -41,11 +49,13 @@ const Header = () => {
       });
     }
 
-    window.addEventListener("scroll", handleScroll);
+    const debouncedHandleScroll = debounce(handleScroll, 300);
+
+    window.addEventListener("scroll", debouncedHandleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", debouncedHandleScroll);
     };
-  }, []);
+  });
 
   const menuItems = [
     {
@@ -97,7 +107,7 @@ const Header = () => {
                   <a
                     href={item.href}
                     className={`${
-                      activeMenuItem === item.href ? "border-blue" : ""
+                      activeMenuItem === item.href ? "border-blue" : null
                     } site-header__item__link font-medium text-[15px] lg:text-[16px] border-b border-[#fff] hover:border-blue px-2 py-6 block transition`}
                   >
                     {item.label}
